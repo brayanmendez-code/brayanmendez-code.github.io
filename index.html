@@ -5,18 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Brayan Mendez | Portafolio</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
+    animation: fadeIn 1s ease-in;
 }
 
 header {
     text-align: center;
     padding: 100px 20px;
-    animation: fadeIn 1.5s ease-in;
 }
 
 h1 {
@@ -76,8 +82,14 @@ footer {
 }
 
 @keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>
 </head>
@@ -88,7 +100,9 @@ footer {
     <h1>Brayan Mendez</h1>
     <p>Tecnólogo en Análisis y Desarrollo de Sistemas de Información</p>
     <p>Desarrollo de Software | Análisis de Datos</p>
-    <a class="btn" href="https://github.com/brayanmendez-code" target="_blank">Ver GitHub</a>
+    <a class="btn" href="https://github.com/brayanmendez-code" target="_blank">
+        <i class="fa-brands fa-github"></i> Ver GitHub
+    </a>
 </header>
 
 <div class="container">
@@ -111,13 +125,17 @@ Mar 2024 – Sep 2024<br><br>
 <div class="card">
 <h3>Sistema de Gestión de Empleados – Java</h3>
 <p>Aplicación de escritorio con CRUD conectado a MySQL mediante JDBC.</p>
-<a href="https://github.com/brayanmendez-code/sistema-gestion-empleados-java" target="_blank">Ver Proyecto</a>
+<a href="https://github.com/brayanmendez-code/sistema-gestion-empleados-java" target="_blank">
+<i class="fa-brands fa-github"></i> Ver Proyecto
+</a>
 </div>
 
 <div class="card">
 <h3>Análisis Exploratorio de Ventas – Python</h3>
 <p>Análisis de datos con Pandas y dashboard interactivo generado con Plotly.</p>
-<a href="https://github.com/brayanmendez-code/analisis-ventas-python" target="_blank">Ver Proyecto</a>
+<a href="https://github.com/brayanmendez-code/analisis-ventas-python" target="_blank">
+<i class="fa-brands fa-github"></i> Ver Proyecto
+</a>
 </div>
 
 <h2>🛠 Tecnologías</h2>
@@ -125,16 +143,26 @@ Mar 2024 – Sep 2024<br><br>
 Java | Python | SQL | MySQL | Swing | JDBC | Pandas | Plotly | Excel
 </div>
 
+<h2>📩 Contacto</h2>
+<div class="card">
+  <p><i class="fa-solid fa-envelope"></i> brayanmendez001@gmail.com</p>
+  <p><i class="fa-brands fa-github"></i> github.com/brayanmendez-code</p>
+</div>
+
 <h2>📄 Descargar CV</h2>
 <div class="card">
-<a class="btn" href="Brayan_Mendez_Desarrollador_Junior.pdf" target="_blank">Descargar Hoja de Vida</a>
+<a class="btn" href="Brayan_Mendez_Desarrollador_Junior.pdf" target="_blank">
+<i class="fa-solid fa-file-pdf"></i> Descargar Hoja de Vida
+</a>
 </div>
 
 </div>
 
 <footer>
-<p>📧 brayanmendez001@gmail.com</p>
-<p>© 2026 Brayan Mendez</p>
+  <p>
+    <i class="fa-solid fa-envelope"></i> brayanmendez001@gmail.com
+  </p>
+  <p>© 2026 Brayan Mendez</p>
 </footer>
 
 </body>
