@@ -49,6 +49,17 @@ h2 {
     transition: 0.4s;
 }
 
+.fade-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+  
 .card:hover {
     transform: translateY(-8px);
     background-color: #334155;
@@ -108,12 +119,12 @@ footer {
 <div class="container">
 
 <h2>👨‍💻 Sobre mí</h2>
-<div class="card">
+<div class="card fade-section">
 <p>Soy desarrollador junior con experiencia en desarrollo de aplicaciones Java y análisis de datos con Python. Me enfoco en crear soluciones funcionales, estructuradas y orientadas a bases de datos. Actualmente busco mi primera oportunidad profesional en desarrollo o análisis de datos.</p>
 </div>
 
 <h2>💼 Experiencia</h2>
-<div class="card">
+<div class="card fade-section">
 <strong>Aprendiz SENA – Worley Ingeniería Colombia SAS</strong><br>
 Mar 2024 – Sep 2024<br><br>
 - Gestión y actualización de bases de datos internas.<br>
@@ -122,7 +133,7 @@ Mar 2024 – Sep 2024<br><br>
 
 <h2>🚀 Proyectos</h2>
 
-<div class="card">
+<div class="card fade-section">
 <h3>Sistema de Gestión de Empleados – Java</h3>
 <p>Aplicación de escritorio con CRUD conectado a MySQL mediante JDBC.</p>
 <a href="https://github.com/brayanmendez-code/sistema-gestion-empleados-java" target="_blank">
@@ -130,7 +141,7 @@ Mar 2024 – Sep 2024<br><br>
 </a>
 </div>
 
-<div class="card">
+<div class="card fade-section">
 <h3>Análisis Exploratorio de Ventas – Python</h3>
 <p>Análisis de datos con Pandas y dashboard interactivo generado con Plotly.</p>
 <a href="https://github.com/brayanmendez-code/analisis-ventas-python" target="_blank">
@@ -139,18 +150,18 @@ Mar 2024 – Sep 2024<br><br>
 </div>
 
 <h2>🛠 Tecnologías</h2>
-<div class="card">
+<div class="card fade-section">
 Java | Python | SQL | MySQL | Swing | JDBC | Pandas | Plotly | Excel
 </div>
 
 <h2>📩 Contacto</h2>
-<div class="card">
+<div class="card fade-section">
   <p><i class="fa-solid fa-envelope"></i> brayanmendez001@gmail.com</p>
   <p><i class="fa-brands fa-github"></i> github.com/brayanmendez-code</p>
 </div>
 
 <h2>📄 Descargar CV</h2>
-<div class="card">
+<div class="card fade-section">
 <a class="btn" href="Brayan_Mendez_Desarrollador_Junior.pdf" target="_blank">
 <i class="fa-solid fa-file-pdf"></i> Descargar Hoja de Vida
 </a>
@@ -165,5 +176,21 @@ Java | Python | SQL | MySQL | Swing | JDBC | Pandas | Plotly | Excel
   <p>© 2026 Brayan Mendez</p>
 </footer>
 
+ <script>
+const sections = document.querySelectorAll('.fade-section');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+</script> 
+  
 </body>
 </html>
