@@ -130,6 +130,35 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* TECNOLOGÍAS CON ICONOS */
+.tech-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:center;
+}
+
+.tech-card{
+  background:#1e293b;
+  border-radius:12px;
+  padding:15px 20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  transition:0.3s;
+  font-weight:bold;
+}
+
+.tech-card i{
+  font-size:22px;
+  color:#38bdf8;
+}
+
+.tech-card:hover{
+  transform:translateY(-5px);
+  background:#334155;
+} 
 </style>
 </head>
 
@@ -187,8 +216,41 @@ Mar 2024 – Sep 2024<br><br>
 </div>
 
 <h2>🛠 Tecnologías</h2>
-<div class="card fade-section">
-Java | Python | SQL | MySQL | Swing | JDBC | Pandas | Plotly | Excel
+
+<div class="tech-grid fade-section">
+
+<div class="tech-card">
+<i class="fa-brands fa-java"></i> Java
+</div>
+
+<div class="tech-card">
+<i class="fa-brands fa-python"></i> Python
+</div>
+
+<div class="tech-card">
+<i class="fa-solid fa-database"></i> MySQL
+</div>
+
+<div class="tech-card">
+<i class="fa-solid fa-chart-simple"></i> Power BI
+</div>
+
+<div class="tech-card">
+<i class="fa-solid fa-chart-line"></i> Pandas
+</div>
+
+<div class="tech-card">
+<i class="fa-solid fa-chart-pie"></i> Plotly
+</div>
+
+<div class="tech-card">
+<i class="fa-solid fa-gears"></i> JDBC
+</div>
+
+<div class="tech-card">
+<i class="fa-solid fa-file-excel"></i> Excel
+</div>
+
 </div>
 
 <h2 id="certificaciones">📜 Certificaciones</h2>
